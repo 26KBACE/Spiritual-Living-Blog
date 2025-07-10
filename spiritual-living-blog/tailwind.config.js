@@ -1,24 +1,28 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: [
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    fontFamily: {
-      serif: ['Merriweather', 'serif'],
-      sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-    },
     extend: {
       colors: {
-        primary: '#6D9886',
-        secondary: '#F6F6F6',
-        accent: '#FFB085',
-        dark: '#22223b',
-        light: '#f2e9e4',
+        sand: {
+          light: "#fcf8f3",
+          DEFAULT: "#f5efe3",
+          dark: "#e7dec8"
+        },
+        spiritualBlue: {
+          light: "#e9f3fb",
+          DEFAULT: "#b5d1e7",
+          dark: "#5c8ab2"
+        }
       },
-    },
+      fontFamily: {
+        serif: ["Merriweather", "serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui"]
+      }
+    }
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require("@tailwindcss/typography")]
 };
